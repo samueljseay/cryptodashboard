@@ -1,0 +1,40 @@
+.price {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+
+  .change {
+    margin: 0;
+
+    &.arrow-down {
+      color: #f79b7f;
+    }
+
+    &.arrow-up {
+      color: #70c9c0;
+    }
+  }
+
+  .from-to {
+    font-weight: 300;
+    margin: 0;
+    color: #8995b5;
+  }
+
+  .icon-wrapper {
+    margin: 5px 20px;
+
+    &.arrow-down {
+      color: #f79b7f;
+    }
+
+    &.arrow-up {
+      color: #70c9c0;
+    }
+  }
+
+  .to-price {
+    margin: 0;
+    color: #70c9c0;
+  }
+}

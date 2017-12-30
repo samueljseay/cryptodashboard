@@ -1,0 +1,22 @@
+.tile {
+  background-color: #384267;
+  box-shadow: 5px 5px #1f2a42;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 30px;
+  padding-left: 2%;
+  width: 27%;
+
+  &:nth-child(n + 1) {
+    color: #f79b7f;
+  }
+
+  &:nth-child(2n + 1) {
+    color: #70c9c0;
+  }
+
+  &:nth-child(3n + 1) {
+    color: #f16994;
+  }
+}

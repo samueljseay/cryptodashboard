@@ -1,0 +1,11 @@
+body {
+  background-color: #26334f;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
