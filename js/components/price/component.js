@@ -7,7 +7,7 @@ import styles from './styles.css'
 class Price extends Component {
   constructor (props) {
     super(props)
-    this.state = { percentChange: 0, price: 0, icon: 'arrow-down' }
+    this.state = { percentChange: 0, price: 0, icon: null }
   }
 
   componentDidMount () {
@@ -16,21 +16,27 @@ class Price extends Component {
   }
 
   async updatePrice () {
-    const { price, percentChange } = await CryptoCompare.fetchPrice(this.props.from, this.props.to)
+    const { price, percentChange } = await CryptoCompare.fetchPrice(this.props.from, this.props.to, this.props.precision)
     this.setState({ price, percentChange, icon: percentChange > 0 ? 'arrow-up' : 'arrow-down' })
+  }
+
+  renderIcon () {
+    return (
+      <div className={`icon-wrapper ${this.state.icon}`} >
+        <i className={`fa-${this.state.icon} fa-3x fas`} />
+      </div>
+    )
   }
 
   render () {
     return (
       <div className='price'>
-        <div class='stats'>
+        <div className='stats'>
           <h4 className='from-to'>{this.props.from} / {this.props.to}</h4>
-          <p className='to-price'>{this.props.toSymbol}{this.state.price}</p>
+          <p className='to-price'>{this.props.toSymbol} {this.state.price}</p>
           <p className={`change ${this.state.icon}`} >{this.state.percentChange}%</p>
         </div>
-        <div className={`icon-wrapper ${this.state.icon}`} >
-          <i className={`fas fa-3x fa-${this.state.icon}`} />
-        </div>
+        {this.state.icon && this.renderIcon()}
       </div>
     )
   }

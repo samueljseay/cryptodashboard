@@ -1,0 +1,27 @@
+.clock {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 60px;
+  width: 100%;
+
+  .date-time {
+    margin: 0 0 0 50px;
+
+    .heading {
+      width: 560px;
+      font-size: 150px;
+      margin: 0;
+    }
+
+    .subheading {
+      margin: 0;
+      font-weight: 300;
+      color: #f79b7f;
+    }
+  }
+
+  .fa-clock {
+    margin-top: 25px;
+  }
+}

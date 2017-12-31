@@ -1,0 +1,41 @@
+[debug] [2017-12-31T01:03:33.895Z] ----------------------------------------------------------------------
+[debug] [2017-12-31T01:03:33.897Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-12-31T01:03:33.897Z] CLI Version:   3.16.0
+[debug] [2017-12-31T01:03:33.897Z] Platform:      darwin
+[debug] [2017-12-31T01:03:33.897Z] Node Version:  v8.5.0
+[debug] [2017-12-31T01:03:33.898Z] Time:          Sun Dec 31 2017 14:03:33 GMT+1300 (NZDT)
+[debug] [2017-12-31T01:03:33.898Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-31T01:03:33.911Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-31T01:03:33.912Z] > authorizing via signed-in user
+[debug] [2017-12-31T01:03:33.913Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-12-31T01:03:33.913Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/q2lu_alGdb6WXj3_gpk7kcxAuonAoSaCXfuOXTLkFVo',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Dec 31 2017 14:03:33 GMT+1300 (NZDT)
+[debug] [2017-12-31T01:03:34.642Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-31T01:03:34.649Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cryptowarrior-5589b  
+  
+ Sun Dec 31 2017 14:03:34 GMT+1300 (NZDT)
+[debug] [2017-12-31T01:03:35.888Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-31T01:03:35.888Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cryptowarrior-5589b/tokens  
+  
+ Sun Dec 31 2017 14:03:35 GMT+1300 (NZDT)
+[debug] [2017-12-31T01:03:36.778Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/samseay/Code/personal/cryptowarrior'...
+[info] 
+[debug] [2017-12-31T01:03:36.780Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cryptowarrior-5589b  
+  
+ Sun Dec 31 2017 14:03:36 GMT+1300 (NZDT)
+[debug] [2017-12-31T01:03:38.218Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-31T01:03:38.219Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/822860213288/clients/_:getWebAppConfig  
+  
+ Sun Dec 31 2017 14:03:38 GMT+1300 (NZDT)
+[debug] [2017-12-31T01:03:40.514Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+

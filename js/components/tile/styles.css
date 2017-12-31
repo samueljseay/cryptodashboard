@@ -1,12 +1,20 @@
 .tile {
+  align-items: center;
   background-color: #384267;
   box-shadow: 5px 5px #1f2a42;
   display: flex;
-  align-items: center;
-  height: 100px;
-  margin-bottom: 30px;
-  padding-left: 2%;
-  width: 27%;
+  margin: 15px 0;
+
+  &.small {
+    height: 100px;
+    padding-left: 2%;
+    width: 21%;
+  }
+
+  &.large {
+    height: 500px;
+    width: 100%;
+  }
 
   &:nth-child(n + 1) {
     color: #f79b7f;

@@ -1,0 +1,25 @@
+.rig {
+  display: flex;
+  flex-direction: row;
+
+  .fa-server {
+    margin-top: 5px;
+  }
+
+  .rig-id, .hash, .watts {
+    font-weight: 300;
+    margin: 0 0 0 20px;
+  }
+
+  .rig-id {
+    color: #8995b5;
+  }
+
+  &.rig-ok-true {
+    color: #70c9c0;
+  }
+
+  &.rig-ok-false {
+    color: #f16994;
+  }
+}
