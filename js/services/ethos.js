@@ -1,8 +1,10 @@
 import axios from 'axios'
 
 class EthosService {
-  static async fetchStatus (rigSubdomain) {
-    const { data } = await axios.get(`http://${rigSubdomain}.ethosdistro.com/?json=yes`)
+  static async fetchStatus () {
+    const { data } = await axios.get('/rigstatus')
+
+    console.log(data)
 
     const rigs = Object.values(data.rigs)
 

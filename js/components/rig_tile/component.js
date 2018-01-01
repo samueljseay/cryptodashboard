@@ -22,7 +22,7 @@ class RigTile extends Component {
   }
 
   async updateRigStatus () {
-    const [rigData] = await EthosService.fetchStatus('31dcea')
+    const [rigData] = await EthosService.fetchStatus()
     this.setState({
       running: rigData.allGpusAlive,
       hash: rigData.totalHash,

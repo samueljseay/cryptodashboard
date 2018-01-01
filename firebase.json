@@ -10,11 +10,12 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
-      {
+    "rewrites": [{
+      "source": "/rigstatus",
+      "function": "rigstatus"
+    }, {
         "source": "**",
         "destination": "/index.html"
-      }
-    ]
+    }]
   }
 }

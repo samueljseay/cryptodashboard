@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch & firebase serve",
+    "start": "webpack --watch & firebase serve --only hosting,functions",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sam Seay",
