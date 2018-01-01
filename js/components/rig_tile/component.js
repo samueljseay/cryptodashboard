@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import EthosService from '../../services/ethos'
 import Tile from '../tile/component'
@@ -33,9 +34,9 @@ class RigTile extends Component {
     return (
       <Tile size={'small'} >
         <div className={`rig rig-ok-${this.state.running}`} >
-          <i className='fas fa-3x fa-server' />
+          <FontAwesomeIcon icon='server' size='5x' />
           <div className='stats'>
-            <p className='rig-id'>RIG / 47AFBE</p>
+            <p className='rig-id'>RIG: 47AFBE</p>
             <p className='hash'>{this.state.hash} Sol/s</p>
             <p className='watts' >{this.state.watts} Watts</p>
           </div>

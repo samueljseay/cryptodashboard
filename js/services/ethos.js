@@ -18,7 +18,7 @@ class EthosService {
     return wattsString.split(' ').reduce((acc, watts) => {
       acc += Number(watts)
       return acc
-    }, 0)
+    }, 0).toFixed(1)
   }
 }
 

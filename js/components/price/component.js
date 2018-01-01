@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import CryptoCompare from '../../services/cryptocompare'
 
@@ -20,23 +21,19 @@ class Price extends Component {
     this.setState({ price, percentChange, icon: percentChange > 0 ? 'arrow-up' : 'arrow-down' })
   }
 
-  renderIcon () {
-    return (
-      <div className={`icon-wrapper ${this.state.icon}`} >
-        <i className={`fa-${this.state.icon} fa-3x fas`} />
-      </div>
-    )
-  }
-
   render () {
     return (
       <div className='price'>
         <div className='stats'>
           <h4 className='from-to'>{this.props.from} / {this.props.to}</h4>
           <p className='to-price'>{this.props.toSymbol} {this.state.price}</p>
-          <p className={`change ${this.state.icon}`} >{this.state.percentChange}%</p>
+          <p className={`change ${this.state.icon}`}>
+            {this.state.percentChange}%
+            <span className='icon-wrapper'>
+              {this.state.icon && <FontAwesomeIcon icon={this.state.icon} />}
+            </span>
+          </p>
         </div>
-        {this.state.icon && this.renderIcon()}
       </div>
     )
   }

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   margin-left: 20px;
+  font-size: 36px;
 
   .change {
     margin: 0;
@@ -22,7 +23,7 @@
   }
 
   .icon-wrapper {
-    margin: 5px 40px;
+    margin-left: 20px;
 
     &.arrow-down {
       color: #f79b7f;

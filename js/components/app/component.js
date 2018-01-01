@@ -15,7 +15,7 @@ class App extends Component {
             ['ETH', 'USD', '$', 2],
             ['BTC', 'USD', '$', 2],
             ['IOT', 'USD', '$', 2],
-            ['ZEN', 'BTC', 'Ƀ', 8]
+            ['ZEN', 'BTC', 'Ƀ', 6]
           ].map(([from, to, toSymbol, precision, icon], i) => (
             <PriceTile
               key={i}

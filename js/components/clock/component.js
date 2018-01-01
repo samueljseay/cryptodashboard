@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import moment from 'moment'
 
 import css from './styles.css'
@@ -20,7 +21,7 @@ class Clock extends Component {
     return {
       time: now.format('H:mm:ss'),
       a: now.format('a'),
-      date: now.format('MMMM Do YYYY')
+      date: now.format('Do MMMM YYYY')
     }
   }
 
@@ -31,9 +32,9 @@ class Clock extends Component {
   render () {
     return (
       <div className='clock'>
-        <i className='fas fa-clock fa-10x' />
-        <div className='date-time' >
-          <h1 className='heading' >{this.state.time}</h1>
+        <FontAwesomeIcon icon='clock' size='10x' />
+        <div className='date-time'>
+          <h1 className='heading'>{this.state.time}</h1>
           <h2 className='subheading'>{this.state.date}</h2>
         </div>
       </div>

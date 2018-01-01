@@ -7,6 +7,7 @@
   }
 
   .rig-id, .hash, .watts {
+    font-size: 34px;
     font-weight: 300;
     margin: 0 0 0 20px;
   }

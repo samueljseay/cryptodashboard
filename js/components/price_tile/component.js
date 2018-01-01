@@ -8,10 +8,10 @@ import { Btc, Eth, Iota, Zec } from 'react-cryptocoins'
 class PriceTile extends Component {
   getCoinIcon (coin) {
     return {
-      ETH: <Eth size={48} />,
-      ZEN: <Zec size={48} />,
-      IOT: <Iota size={48} />,
-      BTC: <Btc size={48} />
+      ETH: <Eth size={80} />,
+      ZEN: <Zec size={80} />,
+      IOT: <Iota size={80} />,
+      BTC: <Btc size={80} />
     }[coin]
   }
 

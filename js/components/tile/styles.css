@@ -6,13 +6,13 @@
   margin: 15px 0;
 
   &.small {
-    height: 100px;
-    padding-left: 2%;
+    height: 155px;
+    padding: 1.5%;
     width: 21%;
   }
 
   &.large {
-    height: 500px;
+    height: 300px;
     width: 100%;
   }
 
