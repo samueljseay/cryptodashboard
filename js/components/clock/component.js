@@ -19,9 +19,9 @@ class Clock extends Component {
     const now = moment()
 
     return {
-      time: now.format('H:mm:ss'),
+      time: now.format('H:mm'),
       a: now.format('a'),
-      date: now.format('Do MMMM YYYY')
+      date: now.format('dddd Do MMMM YYYY')
     }
   }
 
@@ -32,11 +32,11 @@ class Clock extends Component {
   render () {
     return (
       <div className='clock'>
-        <FontAwesomeIcon icon='clock' size='10x' />
         <div className='date-time'>
+          <FontAwesomeIcon icon='clock' size='10x' />
           <h1 className='heading'>{this.state.time}</h1>
-          <h2 className='subheading'>{this.state.date}</h2>
         </div>
+        <h2 className='subheading'>{this.state.date}</h2>
       </div>
     )
   }

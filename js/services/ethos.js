@@ -3,9 +3,6 @@ import axios from 'axios'
 class EthosService {
   static async fetchStatus () {
     const { data } = await axios.get('/rigstatus')
-
-    console.log(data)
-
     const rigs = Object.values(data.rigs)
 
     return rigs.map((rig) => ({

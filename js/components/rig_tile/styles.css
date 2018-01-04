@@ -3,7 +3,7 @@
   flex-direction: row;
 
   .fa-server {
-    margin-top: 5px;
+    margin-top: 20px;
   }
 
   .rig-id, .hash, .watts {

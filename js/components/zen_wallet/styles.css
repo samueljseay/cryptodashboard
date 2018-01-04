@@ -1,0 +1,22 @@
+.wallet {
+  font-size: 36px;
+
+  .balance-details {
+    margin-left: 20px;
+  }
+
+  .balances {
+    display: flex;
+
+    .fa-dollar-sign {
+      margin-top: 25px;
+    }
+  }
+
+  .heading {
+    font-weight: 300;
+    font-size: 34px;
+    margin: 0;
+    color: #8995b5;
+  }
+}
