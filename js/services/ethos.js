@@ -2,12 +2,11 @@ import axios from 'axios'
 
 class EthosService {
   static async fetchStatus () {
-    const { data } = await axios.get('/rigstatus')
-    const rigs = Object.values(data.rigs)
+    const { data: { per_info, rigs } } = await axios.get('/rigstatus')
 
-    return rigs.map((rig) => ({
-      allGpusAlive: data.total_gpus === data.alive_gpus,
-      totalHash: data.total_hash,
+    return Object.values(rigs).map((rig) => ({
+      allGpusAlive: per_info[rig.miner].per_total_gpus === per_info[rig.miner].per_alive_gpus,
+      totalHash: per_info[rig.miner].hash,
       condition: rig.condition,
       watts: EthosService.calculateWattsConsumed(rig.watts)
     }))
