@@ -24,10 +24,10 @@ class App extends Component {
         <RigTile />
         {
           [
+            ['XRP', 'USD', '$', 2],
             ['ZEC', 'USD', '$', 2]
           ].map(this.renderPriceTile)
         }
-        <NiceHashWalletTile />
         <ZenWalletTile />
       </div>
     )
