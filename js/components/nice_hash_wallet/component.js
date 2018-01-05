@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
-import ZenExplorer from '../../services/zenexplorer'
+import NiceHashService from '../../services/nicehash'
+import styles from '../zen_wallet/styles.css'
 
-import styles from './styles.css'
-
-class ZenWallet extends Component {
+class NiceHashWallet extends Component {
   constructor (props) {
     super(props)
-    this.state = { walletAddress: '', walletBalance: 0, walletUSD: 0 }
+    this.state = { walletBalance: 0, walletUSD: 0 }
   }
 
   componentDidMount () {
@@ -17,8 +16,8 @@ class ZenWallet extends Component {
   }
 
   async updateBalance () {
-    const { walletAddress, walletZEN, walletUSD } = await ZenExplorer.fetchWalletBalance()
-    this.setState({ walletAddress, walletUSD: walletUSD.toFixed(2), walletZEN: walletZEN.toFixed(2) })
+    const { balance, balanceUSD } = await NiceHashService.fetchWalletBalance()
+    this.setState({ walletBalance: balance, walletUSD: balanceUSD })
   }
 
   render () {
@@ -27,8 +26,8 @@ class ZenWallet extends Component {
         <div className='balances'>
           <FontAwesomeIcon icon='usd-square' size='2x' />
           <div className='balance-details'>
-            <h2 className='heading'>WALLET</h2>
-            <div>ZEN {this.state.walletZEN}</div>
+            <h2 className='heading'>NH WALLET</h2>
+            <div>BTC Ƀ{this.state.walletBalance}</div>
             <div>USD ${this.state.walletUSD}</div>
           </div>
         </div>
@@ -37,4 +36,4 @@ class ZenWallet extends Component {
   }
 }
 
-export default ZenWallet
+export default NiceHashWallet

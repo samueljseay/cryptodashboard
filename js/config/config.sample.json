@@ -1,3 +1,7 @@
 {
-  "zenCashWalletAddress": "A zen cash wallet address"
+  "zenCashWalletAddress": "A zen cash wallet address",
+  "niceHash": {
+    "apiID": "API ID for NiceHash",
+    "apiKey": "API Key or Readonly Key"
+  }
 }

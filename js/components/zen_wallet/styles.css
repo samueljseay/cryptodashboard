@@ -8,7 +8,7 @@
   .balances {
     display: flex;
 
-    .fa-dollar-sign {
+    svg {
       margin-top: 25px;
     }
   }

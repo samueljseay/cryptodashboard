@@ -19,7 +19,7 @@ class Clock extends Component {
     const now = moment()
 
     return {
-      time: now.format('H:mm'),
+      time: now.format('h:mm'),
       a: now.format('a'),
       date: now.format('dddd Do MMMM YYYY')
     }

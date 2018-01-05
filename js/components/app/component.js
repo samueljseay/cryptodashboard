@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import ClockTile from '../clock_tile/component'
+import NiceHashWalletTile from '../nice_hash_wallet_tile/component'
 import PriceTile from '../price_tile/component'
 import RigTile from '../rig_tile/component'
 import ZenWalletTile from '../zen_wallet_tile/component'
@@ -23,10 +24,10 @@ class App extends Component {
         <RigTile />
         {
           [
-            ['ZEC', 'USD', '$', 2],
-            ['XRP', 'USD', '$', 2]
+            ['ZEC', 'USD', '$', 2]
           ].map(this.renderPriceTile)
         }
+        <NiceHashWalletTile />
         <ZenWalletTile />
       </div>
     )
