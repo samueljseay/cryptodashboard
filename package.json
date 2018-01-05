@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "firebase deploy --only hosting,functions",
     "start": "webpack --watch & firebase serve --only hosting,functions",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
