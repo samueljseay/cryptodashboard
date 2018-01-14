@@ -11,7 +11,7 @@ class CryptoCompareService {
     return {
       from: fromSym,
       to: toSym,
-      price: priceData['PRICE'].toFixed(precision),
+      price: Number(priceData['PRICE']).toFixed(precision),
       percentChange: priceData['CHANGEPCT24HOUR'].toFixed(2)
     }
   }
