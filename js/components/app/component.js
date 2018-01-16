@@ -15,7 +15,7 @@ class App extends Component {
           [
             ['ETH', 'USD', '$', 2],
             ['BTC', 'USD', '$', 2],
-            ['SC', 'ETH', 'E', 6],
+            ['ETH', 'BTC', 'Ƀ', 6],
             ['ZEN', 'BTC', 'Ƀ', 6]
           ].map(this.renderPriceTile)
         }
