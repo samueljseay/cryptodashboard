@@ -36,7 +36,7 @@ class RigTile extends Component {
         <div className={`rig rig-ok-${this.state.running}`} >
           <FontAwesomeIcon icon='server' size='5x' />
           <div className='stats'>
-            <p className='rig-id'>RIG: 47AFBE</p>
+            <p className='rig-id'>RIG</p>
             <p className='hash'>{this.state.hash} Sol/s</p>
             <p className='watts' >{this.state.watts} Watts</p>
           </div>

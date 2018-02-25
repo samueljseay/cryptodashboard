@@ -1,0 +1,11 @@
+.solar-edge {
+  font-size: 32px;
+  padding-left: 20px;
+
+  .title {
+    font-size: 34px;
+    font-weight: 300;
+    margin: 0;
+    color: #8995b5;
+  }
+}

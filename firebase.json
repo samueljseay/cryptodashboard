@@ -11,8 +11,8 @@
       "**/node_modules/**"
     ],
     "rewrites": [{
-      "source": "/rigstatus",
-      "function": "rigstatus"
+      "source": "/solaredge",
+      "function": "solaredge"
     }, {
         "source": "**",
         "destination": "/index.html"
