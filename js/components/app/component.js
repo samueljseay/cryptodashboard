@@ -16,7 +16,8 @@ class App extends Component {
             ['ETH', 'USD', '$', 2],
             ['BTC', 'USD', '$', 2],
             ['ETH', 'BTC', 'Ƀ', 6],
-            ['ZEN', 'BTC', 'Ƀ', 6]
+            ['ZEN', 'BTC', 'Ƀ', 6],
+            ['DASH', 'USD', '$', 2]
           ].map(this.renderPriceTile)
         }
         <ClockTile />
