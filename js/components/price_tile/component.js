@@ -3,12 +3,13 @@ import React, { Component } from 'react'
 import Price from '../price/component'
 import Tile from '../tile/component'
 
-import { Btc, Eth, Iota, Ltc, Sia, Xrp, Zec } from 'react-cryptocoins'
+import { Btc, Eos, Eth, Iota, Ltc, Sia, Xrp, Zec } from 'react-cryptocoins'
 
 class PriceTile extends Component {
   getCoinIcon (coin) {
     return {
       BTC: <Btc size={80} />,
+      EOS: <Eos size={80} />,
       ETH: <Eth size={80} />,
       IOT: <Iota size={80} />,
       LTC: <Ltc size={80} />,
