@@ -24,7 +24,13 @@ class PriceTile extends Component {
     return (
       <Tile size={'small'} >
         {this.getCoinIcon(this.props.from)}
-        <Price from={this.props.from} to={this.props.to} precision={this.props.precision} toSymbol={this.props.toSymbol} />
+        <Price
+          interval={this.props.interval}
+          from={this.props.from}
+          to={this.props.to}
+          precision={this.props.precision}
+          toSymbol={this.props.toSymbol}
+        />
       </Tile>
     )
   }

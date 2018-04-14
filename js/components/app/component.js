@@ -5,6 +5,8 @@ import PriceTile from '../price_tile/component'
 import SolarEdgeTile from '../solar_edge_tile/component'
 import ZenWalletTile from '../zen_wallet_tile/component'
 
+const PRICE_UPDATE_INTERVAL = 15000
+
 import css from './styles.css'
 
 class App extends Component {
@@ -35,6 +37,7 @@ class App extends Component {
   renderPriceTile ([from, to, toSymbol, precision, icon], i) {
     return (
       <PriceTile
+        interval={PRICE_UPDATE_INTERVAL}
         key={i}
         icon={icon}
         precision={precision}

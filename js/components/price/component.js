@@ -12,7 +12,7 @@ class Price extends Component {
   }
 
   componentDidMount () {
-    setInterval(this.updatePrice.bind(this), 30000)
+    setInterval(this.updatePrice.bind(this), this.props.interval)
     this.updatePrice()
   }
 
