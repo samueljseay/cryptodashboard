@@ -34,8 +34,10 @@
     "axios": "^0.17.1",
     "firebase-functions": "^0.8.1",
     "moment": "^2.20.1",
+    "plotly.js": "^1.35.2",
     "react": "^16.2.0",
     "react-cryptocoins": "^1.0.10",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-plotly.js": "^2.1.0"
   }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import CryptoCompare from '../../services/cryptocompare'
+import HistoPrice from '../histoprice/component'
 
 import styles from './styles.css'
 
@@ -22,8 +23,8 @@ class Price extends Component {
   }
 
   render () {
-    return (
-      <div className='price'>
+    return ([
+      <div className='price' key={0} >
         <div className='stats'>
           <h4 className='from-to'>{this.props.from} / {this.props.to}</h4>
           <p className='to-price'>{this.props.toSymbol} {this.state.price}</p>
@@ -34,8 +35,14 @@ class Price extends Component {
             </span>
           </p>
         </div>
-      </div>
-    )
+      </div>,
+      <HistoPrice
+        key={1}
+        from={this.props.from}
+        to={this.props.to}
+        percentChange={this.state.percentChange}
+      />
+    ])
   }
 }
 

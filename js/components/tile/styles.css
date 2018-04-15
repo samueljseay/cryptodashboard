@@ -1,15 +1,14 @@
 .tile {
-  align-items: center;
   background-color: #384267;
   box-shadow: 5px 5px #1f2a42;
   display: flex;
   margin: 15px 0;
+  position: relative;
 
   &.small {
-    height: 155px;
-    padding: 1.5%;
-    padding-right: 0;
+    height: 200px;
     width: 320px;
+    padding: 10px 0 10px 1.5%;
   }
 
   &.large {

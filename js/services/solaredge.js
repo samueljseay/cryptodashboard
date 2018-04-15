@@ -3,7 +3,6 @@ import axios from 'axios'
 class SolarEdgeService {
   static async fetchOverview () {
     const { data: overview } = await axios.get('/solaredge')
-    console.log(overview)
     return this.calculateResponse(overview)
   }
 

@@ -1,11 +1,13 @@
 import axios from 'axios'
 
-const API_URL = 'https://min-api.cryptocompare.com/data'
+const client = axios.create({
+  baseURL: 'https://min-api.cryptocompare.com/data/'
+})
 
 class CryptoCompareService {
   // use capital letters for symbols. e.g. `BTC` not `btc`
   static async fetchPrice (fromSym, toSym, precision) {
-    const { data } = await axios.get(`${API_URL}/pricemultifull?fsyms=${fromSym}&tsyms=${toSym}`)
+    const { data } = await client.get(`pricemultifull?fsyms=${fromSym}&tsyms=${toSym}`)
     const priceData = data['RAW'][fromSym][toSym]
 
     return {
@@ -14,6 +16,12 @@ class CryptoCompareService {
       price: Number(priceData['PRICE']).toFixed(precision),
       percentChange: priceData['CHANGEPCT24HOUR'].toFixed(2)
     }
+  }
+
+  // A simple history of prices from today to a limit of days. We take the high/low average
+  static async fetchHistoricalPrice (fromSym, toSym, limit) {
+    const { data } = await client.get(`histoday?fsym=${fromSym}&tsym=${toSym}&limit=${limit}`)
+    return data['Data'].map(({ high, low }) => (high + low) / 2)
   }
 }
 

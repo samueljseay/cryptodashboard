@@ -25,11 +25,11 @@ class App extends Component {
         {
           [
             ['EOS', 'BTC', 'Ƀ', 6],
-            ['ZEC', 'USD', '$', 2]
+            ['ZEC', 'USD', '$', 2],
+            ['LTC', 'USD', '$', 2]
           ].map(this.renderPriceTile)
         }
         <SolarEdgeTile />
-        <ZenWalletTile />
       </div>
     )
   }
