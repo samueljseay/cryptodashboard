@@ -2,7 +2,7 @@
   background-color: #384267;
   box-shadow: 5px 5px #1f2a42;
   display: flex;
-  margin: 15px 0;
+  margin: 10px 0;
   position: relative;
 
   &.small {
